@@ -36,6 +36,32 @@ Then configure the rules you want to use under the rules section.
 }
 ```
 
+If you want to lint vue file, you can override you base config.
+
+```json
+{
+  "overrides": [
+    {
+      "plugins": ["component-filenames"],
+      "files": ["**/*.vue"],
+      "rules": {
+        "component-filenames/upper-camel-case": 2
+      }
+    }
+  ]
+}
+```
+
+If you want to ignore some filenames, you can config your rules as,
+
+```json
+{
+  "rules": {
+    "component-filenames/upper-camel-case": [2, ["your ignore names"]]
+  }
+}
+```
+
 ## Supported Rules
 
 - Fill in provided rules here
